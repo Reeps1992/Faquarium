@@ -1,0 +1,86 @@
+
+<!-- MAIN -->
+<?php require 'app/articles.php' ?>
+<main class="main">
+  <div class="container">
+    <!-- ANIMAUX SAMPLE -->
+    <a href="#animaux"></a>
+    <div id="animaux-title">
+      <h2>Découvrez les animaux du parc aquatique.</h2>
+      <p>10 000 animaux évoluent dans des environnements tempéré, polaire et tropical,
+         une biodiversité surprenante, des habitats marins fidèlement reconstitués.
+         Des aquariums, dont le grand aquarium d’1 million de litres d’eau de mer
+         présentent de nombreuses espèces d’animaux marins et de poissons :
+         requins, méduses, murènes, homard bleu, poissons clowns, manchots, phoques,
+         crabes royaux, poissons Napoléon, langoustines, hippocampes, loutres…</p>
+    </div>
+    <hr class="hr-css" id="parc-hr">
+    <div class="animaux-sample">
+      <article class="content-article article0">
+        <img class="min" src="<?= $articles[0]['img1']; ?>" alt="Décourvrez l'imposant poisson napoléon">
+        <img class="max" src="<?= $articles[0]['max']; ?>" alt="Décourvrez l'imposant poisson napoléon">
+        <div class="content-article-over">
+          <h3><?= $articles[0]['name']; ?></h3>
+          <div class="focus-button"><a href="index.php?p=article&id=0"><i class="fas fa-chevron-right"></i></a></div>
+        </div>
+      </article>
+      <article class="content-article article1">
+        <img class="min" src="<?= $articles[1]['img1']; ?>" alt="Décourvrez la raie pastenague à points bleus">
+        <img class="max" src="<?= $articles[1]['max']; ?>" alt="Décourvrez la raie pastenague à points bleus">
+        <div class="content-article-over">
+          <h3><?= $articles[1]['name']; ?></h3>
+          <div class="focus-button"><a href="index.php?p=article&id=1"><i class="fas fa-chevron-right"></i></a></div>
+        </div>
+      </article>
+      <article class="content-article article2">
+        <img class="min" src="<?= $articles[2]['img1']; ?>" alt="Décourvrez la loutre d'europe">
+        <img class="max" src="<?= $articles[2]['max']; ?>" alt="Décourvrez la loutre d'europe">
+        <div class="content-article-over">
+          <h3><?= $articles[2]['name']; ?></h3>
+          <div class="focus-button"><a href="index.php?p=article&id=2"><i class="fas fa-chevron-right"></i></a></div>
+        </div>
+      </article>
+    </div>
+    <div class="sample2">
+
+    </div>
+    <div id="animaux-more">
+      <button type="button"><i class="fas fa-plus"></i>Voir plus d'animaux</button>
+    </div>
+    <hr class="hr-css">
+    <!-- SOIGNEUR SAMPLE -->
+    <a href="#animations"></a>
+    <div id="soigneur-title">
+      <h2>Soigneur d'un jour à Faquarium</h2>
+      <p>Vivez un moment inoubliable à la découverte du métier de soigneur animalier lors d’une matinée intense et riche en émotions. Découvrez le quotidien des soigneurs en les accompagnant pendant le nourrissage des phoques, des loutres de mer ou des manchots…</p>
+      <p>Vous approcherez l’intimité de ces pensionnaires et vous observerez même les exercices vétérinaires qui accompagnent leur nourrissage. Vous vous réchaufferez ensuite dans les coulisses du pavillon tropical pour un nourrissage haut en couleur… Les raies, les requins et les poissons multicolores n’auront plus de secrets pour vous et vous apprendrez même à manipuler un animal discret et indispensable : le corail.</p>
+    </div>
+    <div id="soigneur-sample">
+      <div id="soigneur-img">
+        <img src="ressources/Simon-Costeux-anc-bassin-tactile-A-Rosenfeld-5-300x300.jpg" alt="Soigneur d'un jour">
+      </div>
+      <div id="soigneur-comment">
+        <span>ILS EN PARLENT</span>
+        <p>Témoignages recueillis de manière anonyme après l’animation « Soigneur d’un jour »</p>
+        <p><i>« Je me rends mieux compte des métiers de passion et de précision. J’ai apprécié le rythme de cette matinée, dense sans être dans la précipitation. Matinée presque trop courte. »</i></p>
+        <p><i>« Un très bon moment, beaucoup d’explication intéressante. Le fait d’être 4 permet vraiment de profiter des activités et de poser des questions. Des soigneurs très sympathiques ainsi qu’un guide dynamique et attentionné. »</i></p>
+        <p><i>« Super moment de par la diversité des activités et les explications du guide et des soigneurs. Tout le monde prend son temps, on se sent privilégié ! »</i></p>
+      </div>
+    </div>
+    <div id="soigneur-info">
+      <span>INFORMATIONS PRATIQUES</span>
+      <ul>
+        <li>Durée : 2H30</li>
+        <li>De 10H à 12H30, rendez-vous à l’entrée administrative de Faquarium</li>
+        <li>Les mercredis, samedis et dimanches toute l’année</li>
+        <li>À partir de 12 ans (accompagné d’un adulte) ou 16 ans (non accompagné)</li>
+        <li>70€*/personne</li>
+        <li>Effectif maximum : 4 personnes</li>
+      </ul>
+      <small>*entrée à Faquarium comprise</small>
+    </div>
+    <div id="soigneur-reservation">
+      <div><a href="index.php?p=reservation">Réserver un billet</a></div>
+    </div>
+  </div>
+</main>

@@ -1,0 +1,1034 @@
+/* FONT FACE ******************************************************************/
+
+@font-face {
+  font-family: "Caveat";
+  src: url("ressources/fonts/Caveat/Caveat-Regular.tff") format("tff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  src: url("ressources/fonts/Raleway/Raleway-Light.tff") format("tff");
+}
+
+/* START *********************************************************************/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  table-layout: fixed;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  z-index: 10;
+  width: 100%;
+  margin: auto;
+  font-size: 1.6em;
+  font-family: "Raleway";
+}
+
+p, a, i{
+  font-size: 1.6em;
+}
+
+i {
+  font-size: 1em;
+}
+
+.fas {
+  font-size: 2em;
+}
+
+a {
+  color: midnightblue;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, button {
+  outline:none;
+}
+
+h1,h2,h3,h4 {
+  font-family: "Dosis", sans-serif;
+}
+
+h1, h2 {
+  font-size: 2.5em;
+  color: midnightblue;
+}
+
+h3 {
+  font-size: 1.6em;
+  color: orange;
+  width: 64%;
+}
+
+h4 {
+  font-size: 1.6em;
+}
+
+img {
+  width: 100%;
+  box-shadow: 3px 3px 8px 4px #958b8b42;
+  border-radius: 15px;
+}
+
+.container, footer {
+  width: 90%;
+  margin: auto;
+}
+
+.flexslider {
+  background-color: #ffffff00;
+  border: none;
+}
+
+.hr-css {
+  margin: 2em;
+}
+
+.reservation-title p {
+  margin-bottom: 1em;
+}
+
+/*********************************************** BUBBLES **********************/
+
+.fish {
+    position: fixed;
+    border-radius: 50%;
+    z-index:-1;
+    border: 1px solid lightblue;
+}
+
+.fish.small {
+    width: 10px;
+    height: 10px;
+}
+
+.fish.medium {
+    width: 20px;
+    height: 20px;
+}
+
+.fish.large {
+    width: 30px;
+    height: 30px;
+}
+
+.bubbles {
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  margin-right: 50px;
+  background-color: #f1fdfd;
+  border: 1px solid lightblue;
+  border-radius: 50%;
+  opacity: .75;
+  width: 40px;
+  height: 40px;
+  animation: up 4s infinite;
+}
+
+.bubble-2 {
+  animation: up 2s infinite;
+}
+
+.bubble-3 {
+  animation: up 5s infinite;
+}
+
+.bubble-4 {
+  animation: up 6s infinite;
+}
+
+.bubble-5 {
+  animation: up 4s infinite;
+}
+
+.bubble-6 {
+  animation: up 2s infinite;
+}
+
+.bubble-7 {
+  animation: up 4s infinite;
+}
+
+.bubble-8 {
+  animation: up 3s infinite;
+}
+
+/* START **********************************************************************/
+
+.page, .header, .main, .footer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.main {
+  padding-top: 3em;
+  /* display: flex; */
+}
+
+/********************************************** HEADER ************************/
+
+.header {
+  background: #ffffff;
+  position: fixed;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid orange;
+}
+
+.header nav {
+  width: 100%;
+  display: none;
+  flex-direction: row;
+}
+
+.header-item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.responsive-menu-button {
+  left: 1em;
+  top: 1em;
+  position: fixed;
+  z-index: 50;
+}
+
+.responsive-menu-button:hover {
+  cursor: pointer;
+}
+
+.cross {
+  display: none;
+}
+
+.cross, .bars {
+  color: orange;
+}
+
+.after {
+  transition: 0.3s;
+  width: 0;
+  border-top: 2px solid midnightblue;
+}
+
+.menu-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: midnightblue;
+  transition: 0.5s;
+}
+
+
+#logo {
+  display: none;
+  /* width: 20%; ************************* RESPONSIVE APRES *******************/
+}
+
+#div-menu{
+  /* width: 60%; ************************* RESPONSIVE APRES *******************/
+  display: flex;
+  width: 100%;
+}
+
+#menu {
+  display: block;
+  width: 60%;
+  text-align: center;
+}
+
+.menu-item {
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#reservation{
+  display: none;
+  /* width: 20%; ************************* RESPONSIVE APRES *******************/
+}
+
+/******************************************* HOME / PARC  *********************/
+
+.main#home {
+  padding-top: 0;
+}
+
+.video-container {
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	height: 0;
+	overflow: hidden;
+}
+
+.video-container iframe,
+.video-container object,
+.video-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.filter {
+    width: 100%;
+    pointer-events: none;
+}
+
+#media-over {
+  display: none;
+}
+
+#reserver, #reserver-over, #final-res, .reserver-responsive div, #soigneur-reservation div {
+  font-size: 1em;
+  padding: 15px 25px;
+  color: white;
+  border: 1px solid #3468db;
+  background: none;
+  box-shadow: 1px 1px 7px 1px #00000038;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#reserver-over, .reserver-responsive div, #soigneur-reservation div {
+  max-width: 300px;
+  text-align: center;
+}
+
+.reserver-responsive {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#reserver-over a, #reserver a {
+  color: white;
+  transition: 0.4s;
+}
+
+#reserver-over:hover a, #reserver:hover a,  #final-res{
+  color: orange;
+}
+
+#reserver::before, #reserver-over::before, #final-res::before, .reserver-responsive div::before, #soigneur-reservation div::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 0%;
+  width: 100%;
+  background: white;
+  z-index: -1;
+  top: 0;
+  border-radius: 0 0 50% 50%;
+  transition: 0.8s;
+}
+
+#soigneur-reservation div a {
+  transition: 0.8s;
+}
+
+#final-res::before, .reserver-responsive div::before, #soigneur-reservation div::before {
+  background: orange;
+}
+
+#final-res:hover, .reserver-responsive div:hover a, #soigneur-reservation div:hover a {
+  color: white;
+}
+
+#reserver:hover::before, #reserver-over:hover::before, #final-res:hover::before, .reserver-responsive div:hover::before, #soigneur-reservation div:hover::before {
+  height: 180%;
+}
+
+.reserver-responsive a {
+  color: orange;
+  transition: 0.4s;
+}
+
+.reserver-responsive h2 {
+  text-align: center;
+}
+
+.content-title {
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+#content-img {
+  padding: 1em;
+}
+
+#content-item {
+  padding: 1em;
+}
+
+.animaux-sample, .sample2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-article {
+  max-width: 340px;
+  margin: 1em 0;
+}
+
+.max {
+  display: none;
+}
+
+.content-article-over {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  margin: 1em;
+  margin-top: -6.7em;
+  padding: 0 0.5em;
+  width: 80%;
+  max-width: 300px;
+}
+
+.focus-button {
+  display: none;
+}
+
+.fa-chevron-right:before {
+  font-size: 1.5em;
+  color: orange;
+}
+
+#more{
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+#more div {
+  padding: 0.6em 1.1em;
+  border: none;
+  border-radius: 3em;
+  box-shadow: 0px 0px 5px 3px #4c494936;
+}
+
+#more a {
+  display: flex;
+  align-items: center;
+}
+
+#more :before {
+  display: none;
+}
+
+#animaux-more{
+  display: flex;
+  justify-content: center;
+  margin-top: 2em;
+}
+
+#animaux-more button {
+  color: midnightblue;
+  padding: 1em 1.1em;
+  border: none;
+  border-radius: 3em;
+  box-shadow: 0px 0px 11px 7px #4c49495e;
+  text-shadow: 3px 6px 5px #756c6cc9;
+  margin-left: 1.5em;
+}
+
+#animaux-more .fa-plus{
+  margin-right:0.5em;
+}
+
+#soigneur-reservation {
+  margin: 1.5em 0;
+  display: flex;
+  justify-content: center;
+}
+
+#soigneur-sample {
+  margin: 1.5em 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#soigneur-sample span {
+  font-size: 2em;
+  color: midnightblue;
+}
+
+#soigneur-info {
+  margin: 1em 0;
+}
+
+#soigneur-img {
+  margin: 1em;
+}
+
+/********************************************* TARIFS *************************/
+
+.tarif-container {
+  margin: 1em 0;
+}
+
+.tarif-img, .tarif-title {
+  display: flex;
+  justify-content: center;
+}
+
+.tarif-title h3 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.tarif-choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.tarif-info {
+  margin: 0.5em;
+  text-align: justify;
+}
+
+.buy-action div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 0.6em;
+  padding: 0.5em 1em;
+  color: white;
+  border: none;
+  border-radius: 50em;
+  background-color: #2e4d89;
+  box-shadow: 1px 1px 7px 1px #00000038;
+}
+
+.buy {
+  margin: 1em;
+}
+
+.calendar
+{
+  font-family: "Raleway";
+  background:#fff;
+  border-radius:10px;
+  color:#222629;
+  overflow:hidden;
+  margin-top:20px;
+  box-shadow: 3px 3px 8px #8484844f;
+}
+
+.calendar button
+{
+  border:none;
+}
+
+.calendar-header
+{
+  background:#ddd;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+}
+
+.calendar .month
+{
+  display:inline-block;
+  font-weight:bold;
+}
+
+.calendar button
+{
+  background:none;
+  cursor:pointer;
+  font-size:23px;
+  font-weight:bold;
+  height:100%;
+  padding:0 15px;
+}
+
+.calendar button:hover
+{
+  color:#009FB7;
+}
+
+.calendar button:first-child
+{
+  float:left;
+}
+
+.calendar button:last-child
+{
+  float:right;
+}
+
+.calendar .cell
+{
+  background:#fff;
+  color:#5d5d5d;
+  display:inline-block;
+  padding:10px 0;
+  text-align:center;
+  width:calc(100% / 7);
+}
+
+.calendar .day
+{
+  font-size:.8rem;
+  padding:8px 0;
+}
+
+.calendar .day, .calendar .today
+{
+  background:#009FB7;
+  color:#fff;
+}
+
+iframe {
+  width: 100%;
+}
+
+/*********************************************** RESERVATION ******************/
+
+.form {
+  padding: 1em;
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: auto;
+  margin-top: 1.5em;
+  border-radius: 15px;
+  box-shadow: 0px 0px 7px 2px #00000038;
+}
+
+.control-form {
+  display: flex;
+  justify-content: center;
+}
+
+.control-content {
+  border:none;
+  border-radius: 25px;
+  padding: 5px;
+  background: rgb(59,24,83);
+  background: -moz-linear-gradient(0deg, rgba(59,24,83,1) 0%, rgba(29,63,253,1) 50%, rgba(6,186,163,1) 100%);
+  background: linear-gradient(36deg, rgba(59,24,83,1) 0%, rgba(29,63,253,1) 50%, rgba(6,186,163,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3b1853",endColorstr="#06baa3",GradientType=1);
+  padding: 3px;
+  height: 40px;
+  width: 80%;
+  margin: 1em;
+  transition: .2s;
+}
+
+.border-max {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.control-content:hover, .control-content:focus {
+  animation: animate 2s infinite ease;
+}
+
+.control-form input, .control-form select {
+  border: none;
+  border-radius: 25px;
+  background: #ffffffdb;
+  padding: 5px;
+  padding-left: 10px;
+  height: 34px;
+  width: 100%;
+}
+
+.control-form input[placeholder] {
+  font-family: "Raleway";
+}
+
+/********************************************** ARTICLES **********************/
+
+#last-art-img {
+  margin: 1em;
+  display: flex;
+  justify-content: center;
+}
+
+.artcile-big-img {
+  width: 500px;
+}
+
+.article-title {
+  margin-left: 3em;
+}
+
+.article-img img {
+  margin: 1em 0;
+  border-radius: 25px;
+  box-shadow: 2px 3px 7px 3px #66656f3d;
+  width: 100%;
+}
+
+div.previous {
+  display: flex;
+  justify-content: flex-end;
+  margin: 1em 0;
+}
+
+div .previous button {
+  color: white;
+  padding: 0.6em 1.1em;
+  border: none;
+  border-radius: 3em;
+  background: #6a9cd3e6;
+  font-size: 1.2em;
+}
+
+.fiche {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding:1em;
+  color: white;
+  background-color: midnightblue;
+  box-shadow: 2px 3px 7px 3px #66656f3d;
+  border-radius: 25px;
+}
+
+.text {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 1.5em;
+}
+
+.text h3 {
+  margin-bottom: 0.5em;
+}
+
+.hr-fiche {
+  margin: 0.5em;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+/******************************************** FOOTER **************************/
+
+#flexslider-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -1.5em;
+}
+
+#flexslider-title img {
+  box-shadow: none;
+  width: 50%;
+}
+
+#social, #foot-menu>ul, #foot-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 1em;
+}
+
+#social {
+  padding-bottom: 1em;
+}
+
+#foot {
+  background-color: midnightblue;
+}
+
+#foot-menu>ul {
+  flex-direction: column;
+}
+
+#foot-menu li {
+  text-decoration: underline;
+  display: flex;
+  justify-content: center;
+}
+
+#foot-menu li a , #foot-page{
+  color: white;
+  text-align: center;
+}
+
+.fa-facebook::before {
+  color: rgb(66, 103, 178);
+  padding: 15px;
+  border: 3px solid rgb(66, 103 ,178);
+  border-radius: 50px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.fa-twitter::before {
+  color: #01AAEE;
+  padding: 15px;
+  border: 3px solid #01AAEE;
+  border-radius: 50px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.fa-instagram::before {
+  color: #FDAC4C;
+  padding: 15px 14px;
+  border: 3px solid #FDAC4C;
+  border-radius: 50px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+.fa-youtube::before{
+  color: #FF0000;
+  padding: 15px 12px;
+  border: 3px solid #FF0000;
+  border-radius: 50px;
+  position: relative;
+  font-size: 0.8em;
+}
+
+/***************************************** RESPONSIVE 600PX *******************/
+
+@media screen and (min-width: 600px){
+
+  /******************* HEADER ***********/
+
+  #menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .after {
+    display: none;
+  }
+
+  /************** HOME / PARC ************/
+
+  #media-over {
+    display: none;
+    position: absolute;
+    top: 7em;
+    left: 2em;
+  }
+
+  #media-over h2 {
+    color: white;
+  }
+
+  .reserver-responsive {
+    display: none;
+  }
+
+  .focus-button {
+    display: block;
+  }
+
+
+  /********* ACCESS ********************/
+
+  .tarif-container {
+    max-width: 40%;
+    margin: 1em 0;
+  }
+
+  #tarifs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-flow: wrap;
+}
+
+  /*************** ARTICLES ************/
+
+  .wrap {
+    flex-direction: row;
+  }
+
+  .fiche {
+    width: 40%;
+  }
+
+}
+
+/***************************************** RESPONSIVE 1024PX ******************/
+
+@media screen and (min-width: 1024px) {
+
+  /*********** HOME / PARC **************/
+
+  #media-over {
+    top: 10em;
+  }
+
+  .menu-link:hover::after {
+    width: 100%;
+  }
+
+  .content-article {
+    max-width: 300px;
+  }
+
+  .content-article-over {
+    width: 27%;
+  }
+
+  .min {
+    display: none;
+  }
+
+  .max {
+    display: block;
+  }
+
+  .content-article img{
+    transition: transform 0.2s, 0.5s;
+  }
+
+  .content-article:hover img{
+    transform: scale(1.1);
+    box-shadow: 4px 3px 10px 5px #958b8b7a;
+  }
+
+  .animaux-sample, .sample2 {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .content-article-over {
+    justify-content: space-around;
+  }
+
+  #more :before {
+    display: block;
+  }
+
+  #more .fa-arrow-right:before {
+    opacity: 0;
+    margin-left: -30px;
+    vertical-align: sub;
+    transition: 0.4s 0.3s;
+  }
+
+  #more div:hover .fa-arrow-right:before {
+   opacity: 1;
+   margin-left: 5px;
+  }
+
+  #soigneur-home {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  #content-img img{
+    width: auto;
+  }
+
+  /************** PARC **********/
+
+  #animaux-more button:hover {
+    cursor: pointer;
+  }
+
+  #soigneur-sample {
+    flex-direction: row;
+  }
+
+  #soigneur-img img {
+    width: auto;
+  }
+
+  /********* ACCESS ********************/
+
+  /********* ABOUT ********************/
+
+  .content-about {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1.5em 0;
+  }
+
+  .content-img, .content-text {
+    width: 47%;
+  }
+
+  /*************** ARTICLES ************/
+
+  .wrap {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fiche, .text {
+    width: 75%;
+  }
+
+  .article-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-img img {
+    max-width: 75%;
+  }
+
+  /******** FOOTER *********************/
+
+  #flexslider-title img {
+    width: 30%;
+  }
+
+  #foot-menu>ul {
+    flex-direction: row;
+  }
+
+}
+
+@media screen and (min-width: 1440px) {
+  .container, footer {
+    width: 70%;
+    margin: auto;
+  }
+
+}
+
+
+
+/*************************************** KEYFRAMES ****************************/
+
+@keyframes up {
+  100% {
+    transform: translateY(-950px);
+  }
+}

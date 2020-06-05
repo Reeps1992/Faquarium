@@ -1,0 +1,38 @@
+<!-- MAIN -->
+<main class="main" id="reservation-main">
+  <div class="container" id="page-article">
+    <div class="article-tile">
+      <h1><?= $article['name'] ?></h1>
+      <p><?= $article['description'] ?></p>
+    </div>
+    <div class="previous">
+      <i><button type="button" onclick="javascript:history.go(-1)" name="button">Retour</button></i>
+    </div>
+      <div class="article-img">
+        <img class="article-big-img" src="<?= $article['img1'] ?>" alt="Faquarium animaux"/>
+      </div>
+      <div class="wrap">
+        <div class="fiche">
+          <i></i>
+          <h3><?= $article['fiche1_1'] ?></h3>
+          <p><?= $article['fiche1_2'] ?></p>
+          <hr class="hr-fiche">
+          <h3><?= $article['fiche2_1'] ?></h3>
+          <p><?= $article['fiche2_2'] ?></p>
+          <hr class="hr-fiche">
+          <h3><?= $article['fiche3_1'] ?></h3>
+          <p><?= $article['fiche3_2'] ?></p>
+          <hr class="hr-fiche">
+          <h3><?= $article['fiche4_1'] ?></h3>
+          <p><?= $article['fiche4_2'] ?></p>
+        </div>
+        <div class="text">
+          <h3><?= $article['title'] ?></h3>
+          <p><?= $article['text'] ?></p>
+        </div>
+      </div>
+    <div class="article-img" id="last-art-img">
+      <img class="article-big-img" src="<?= $article['img2'] ?>" alt="Faquarium animaux"/>
+    </div>
+  </div>
+</main>

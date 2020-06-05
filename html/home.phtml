@@ -1,0 +1,74 @@
+<!-- MAIN -->
+<?php require 'app/articles.php'; ?>
+<main class="main" id="home">
+  <!-- MEDIA-CONTENT -->
+  <div id="media-content">
+    <div class="video-container" id="media">
+      <div class="filter">
+        <div id="ytplayer"></div>
+      </div>
+    </div>
+    <div id="media-over">
+    <h2>PLONGEZ DANS L'EXPÉRIENCE  <span>FAQUARIUM</span></h2>
+    <div id="reserver-over"><a href="index.php?p=reservation">Réserver un billet</a></div>
+    </div>
+  </div>
+  <!-- CONTENT -->
+  <div class="container">
+    <!-- CONTENU 1 -->
+    <div class="content">
+      <div class="reserver-responsive">
+        <h2>PLONGEZ DANS L'EXPÉRIENCE  <span>FAQUARIUM</span></h2>
+        <div><a href="index.php?p=reservation">Réserver un billet</a></div>
+      </div>
+      <div class="content-title">
+        <h2><span>Les Animaux</span> de Faquarium</h2>
+        <p>Découvrez la biodiversité pour mieux les protéger</p>
+      </div>
+      <div class="animaux-sample">
+        <article class="content-article article0">
+          <img class="min" src="<?= $articles[0]['img1']; ?>" alt="Décourvrez l'imposant poisson napoléon">
+          <img class="max" src="<?= $articles[0]['max']; ?>" alt="Décourvrez l'imposant poisson napoléon">
+          <div class="content-article-over">
+            <h3><?= $articles[0]['name']; ?></h3>
+            <div class="focus-button"><a href="index.php?p=article&id=0"><i class="fas fa-chevron-right"></i></a></div>
+          </div>
+        </article>
+        <article class="content-article article1">
+          <img class="min" src="<?= $articles[1]['img1']; ?>" alt="Décourvrez la raie pastenague à points bleus">
+          <img class="max" src="<?= $articles[1]['max']; ?>" alt="Décourvrez la raie pastenague à points bleus">
+          <div class="content-article-over">
+            <h3><?= $articles[1]['name']; ?></h3>
+            <div class="focus-button"><a href="index.php?p=article&id=1"><i class="fas fa-chevron-right"></i></a></div>
+          </div>
+        </article>
+        <article class="content-article article2">
+          <img class="min" src="<?= $articles[2]['img1']; ?>" alt="Décourvrez la loutre d'europe">
+          <img class="max" src="<?= $articles[2]['max']; ?>" alt="Décourvrez la loutre d'europe">
+          <div class="content-article-over">
+            <h3><?= $articles[2]['name']; ?></h3>
+            <div class="focus-button"><a href="index.php?p=article&id=2"><i class="fas fa-chevron-right"></i></a></div>
+          </div>
+        </article>
+      </div>
+      <div class="content-item" id="more">
+        <div><a href="index.php?p=parc">Voir d'autres animaux <i class="fas fa-arrow-right"></i> </a></div>
+      </div>
+    </div>
+    <hr class="hr-css">
+    <!-- COTNENU 2   -->
+    <div class="content" id="soigneur-home">
+      <div id="content-img">
+        <img src="ressources/Nausicaa-exposition-temporaire-Ocean-et-climat-chaud-devant-Manchots-du-Cap-Spheniscus-demersus-nourrissage-copryright-Alexis-ROSENFELD-Nausicaa-diaporama-483x221.jpg" alt="Soigneur d'un jour"/>
+      </div>
+      <div id="content-item">
+        <h2>Devenez soigneur d'un jour</h2>
+        <p>Vivez un moment inoubliable à la découverte du métier de
+        soigneur animalier lors d’une matinée intense et riche en émotions.</p>
+        <p>Découvrez le quotidien des soigneurs en les accompagnant pendant le
+        nourrissage des phoques, des loutres de mer ou des manchots…</p>
+      </div>
+    </div>
+  </div>
+  <script src="js/ytAPI.js"></script>
+</main>
